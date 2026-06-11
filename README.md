@@ -102,8 +102,8 @@ This project follows the MIT license inherited from the base Laravel template.
 Screenshots
 Below are Telescope screenshots that demonstrate the performance difference between the cached and non-cached product endpoints. Add the actual image files to `docs/` with the filenames shown so they render here (`docs/telescope-requests.png`, `docs/telescope-request-detail-uncached.png`, `docs/telescope-request-detail-cached.png`).
 
-![Telescope requests list](https://raw.githubusercontent.com/DiveshR/Redis-Caching-in-Laravel/main/docs/telescope-requests.png)
+![Telescope requests list](docs/telescope-requests.png)
 
-![Telescope request detail (uncached)](https://raw.githubusercontent.com/DiveshR/Redis-Caching-in-Laravel/main/docs/telescope-request-detail-uncached.png)
+![Telescope request detail (uncached)](docs/telescope-request-detail-uncached.png)
 
-![Telescope request detail (cached)](https://raw.githubusercontent.com/DiveshR/Redis-Caching-in-Laravel/main/docs/telescope-request-detail-cached.png)
+![Telescope request detail (cached)](docs/telescope-request-detail-cached.png)
