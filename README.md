@@ -16,8 +16,32 @@ Features
 - Example authentication and token handling via Laravel's auth/sanctum/passkeys stack where configured.
 - Performance optimizations including cached endpoints (e.g. `/api/v1/products-cached`), eager loading, and pagination.
 - Tests using Pest/PHPUnit present under `tests/` to validate behavior.
+- Docker-based development stack with PHP-FPM, Nginx, MySQL, Redis, and a queue worker.
 
-Quick start
+Docker setup
+This repository includes a complete Docker development stack using:
+
+- `docker-compose.yml` for services: `app`, `nginx`, `db`, `redis`, and `queue`.
+- `Dockerfile` based on `php:8.3-fpm` with Composer, Redis, MySQL support, and PHP extensions installed.
+- `docker/nginx/default.conf` to serve Laravel through Nginx.
+- `.env.docker` with Docker-specific environment values for MySQL, Redis, and queue/cache configuration.
+
+Docker quick start
+
+```bash
+git clone <repo-url> .
+cp .env.docker .env
+docker compose up -d --build
+```
+
+After startup:
+
+- App container: `php artisan` commands can run in `app`.
+- Web access: `http://localhost:8000`
+- Database: `db` service on port `3306`
+- Redis: `redis` service on port `6379`
+
+Native quick start
 Prereqs: PHP (8.x), Composer, MySQL/SQLite, Node & npm (optional for front-end assets).
 
 1. Install dependencies
